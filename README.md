@@ -17,26 +17,26 @@ https://www.youtube.com/watch?v=ddSHGg4-qSY&t=5s
 Syntax:
 For the program to recognize instructions, they must follow a specific syntax.
 - Any hex values must be preceded by a '$'
-  LD BC, $ABCD ✔
-  LD BC, ABCD  x
+   LD BC, $ABCD ✔
+   LD BC, ABCD  x
 - Each instruction must be on a seperate line
 - Instructions can have any amount of whitespace at the beginning or end, but and instruction with multiple words
   must have only one space between each word, and if the instruction has two operands there must be a comma at the
   end of the first operand.
-  INC BC    ✔
-  INC  BC   x (2 spaces in between words)
-  LD B, H   ✔
-  LD B H    x
-  LD B , H  x
+   INC BC    ✔
+   INC  BC   x (2 spaces in between words)
+   LD B, H   ✔
+   LD B H    x
+   LD B , H  x
 - Instructions are NOT case sensitive.
-  ADD HL, SP  ✔
-  add hl, sp  ✔
-  aDd Hl, sP  ✔ (not recommended)
+   ADD HL, SP  ✔
+   add hl, sp  ✔
+   aDd Hl, sP  ✔ (not recommended)
 Labels:
 This program does support labels. Labels must be on a seperate line and must be one word ended by a colon ':'.
-  my_label:
-  LD A, B
-  JP NZ, my_label
+   my_label:
+   LD A, B
+   JP NZ, my_label
 - Labels ARE case sensitive
 Other:
 - This program currently does not support the db instruction for lists of values.
