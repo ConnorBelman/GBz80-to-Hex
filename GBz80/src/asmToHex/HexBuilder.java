@@ -5,12 +5,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 
 /*----------------------------------------------------------------------
   Made by Connor Belman
@@ -45,7 +49,6 @@ public class HexBuilder extends JFrame implements ActionListener {
 	JButton start = new JButton("Start");
 
 	JLabel log = new JLabel("");
-	
 	
 	public static void main(String args[]) {
 		opCodesMap();
@@ -626,5 +629,4 @@ public class HexBuilder extends JFrame implements ActionListener {
 		opCodes.put("CP D8", 			"FE");
 		opCodes.put("RST 38H", 			"FF");
 	}
-	
 }
