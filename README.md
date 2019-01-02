@@ -15,7 +15,7 @@ For the program to recognize instructions, they must follow a specific syntax.
 - Any hex values must be preceded by a '$'
    * LD BC, $ABCD :heavy_check_mark:
    * LD BC, ABCD  :x:
-- Each instruction must be on a seperate line
+- Each instruction must be on a separate line
 - Instructions can have any amount of whitespace at the beginning or end, but an instruction with multiple words
   must have only one space between each word, and if the instruction has two operands there must be a comma at the
   end of the first operand.
@@ -29,7 +29,7 @@ For the program to recognize instructions, they must follow a specific syntax.
    * add hl, sp  :heavy_check_mark:
    * aDd Hl, sP  :heavy_check_mark: (not recommended)
 #### Labels:
-This program does support labels. Labels must be on a seperate line and must be one word ended by a colon ':'.
+This program does support labels. Labels must be on a separate line and must be one word ended by a colon ':'.
 
    my_label:  
    LD A, B  
