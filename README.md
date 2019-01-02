@@ -13,10 +13,10 @@ and for help setting up location-based input, [check out this video by Chickasau
 #### Syntax:
 For the program to recognize instructions, they must follow a specific syntax.
 - Any hex values must be preceded by a '$'
-   * LD BC, $ABCD ✔
+   * LD BC, $ABCD :heavy_check_mark:
    * LD BC, ABCD  :x:
 - Each instruction must be on a seperate line
-- Instructions can have any amount of whitespace at the beginning or end, but and instruction with multiple words
+- Instructions can have any amount of whitespace at the beginning or end, but an instruction with multiple words
   must have only one space between each word, and if the instruction has two operands there must be a comma at the
   end of the first operand.
    * INC BC    :heavy_check_mark:
