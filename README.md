@@ -1,20 +1,16 @@
 # GBz80-to-Hex
 Converts GBz80 Assembly into hex values
 
------------
-   About   
------------
+## About   
+
 This program is used to convert GBz80 (the Gameboy assembly language) into hex values. This program was made to
 assist people with arbitrary code execution on the Gameboy, such as the 8F glitch in Pokemon Red. 
-For more information about the 8F glitch, check out this guide by TheZZAZZGlitch:
-https://forums.glitchcity.info/index.php?topic=6638.0 
-and for help setting up location-based input, check out this video by ChickasaurusGL (and read the video description):
-https://www.youtube.com/watch?v=ddSHGg4-qSY&t=5s
+For more information about the 8F glitch, check out [this guide by TheZZAZZGlitch](https://forums.glitchcity.info/index.php?topic=6638.0) 
+and for help setting up location-based input, [check out this video by ChickasaurusGL](https://www.youtube.com/watch?v=ddSHGg4-qSY&t=5s) (and read the video description).
 
------------
-   Notes  
------------
-Syntax:
+## Notes  
+
+#### Syntax:
 For the program to recognize instructions, they must follow a specific syntax.
 - Any hex values must be preceded by a '$'
    LD BC, $ABCD ✔
@@ -23,25 +19,27 @@ For the program to recognize instructions, they must follow a specific syntax.
 - Instructions can have any amount of whitespace at the beginning or end, but and instruction with multiple words
   must have only one space between each word, and if the instruction has two operands there must be a comma at the
   end of the first operand.
-   INC BC    ✔
-   INC  BC   x (2 spaces in between words)
-   LD B, H   ✔
-   LD B H    x
-   LD B , H  x
+   * INC BC    ✔
+   * INC  BC   x (2 spaces in between words)
+   * LD B, H   ✔
+   * LD B H    x
+   * LD B , H  x
 - Instructions are NOT case sensitive.
-   ADD HL, SP  ✔
-   add hl, sp  ✔
-   aDd Hl, sP  ✔ (not recommended)
-Labels:
+   * ADD HL, SP  ✔
+   * add hl, sp  ✔
+   * aDd Hl, sP  ✔ (not recommended)
+#### Labels:
 This program does support labels. Labels must be on a seperate line and must be one word ended by a colon ':'.
-   my_label:
-   LD A, B
-   JP NZ, my_label
+
+   my_label:  
+   LD A, B  
+   JP NZ, my_label  
+   
 - Labels ARE case sensitive
-Other:
+#### Other:
 - This program currently does not support the db instruction for lists of values.
 - Alternate mnemonics for instructions are supported, such as "LD A, (C)" and "LD A,($FF00+C)". A full list of instructions
-  can be found here: http://www.pastraiser.com/cpu/gameboy/gameboy_opcodes.html
+  can be found [here.](http://www.pastraiser.com/cpu/gameboy/gameboy_opcodes.html)
   
 If you have any questions, feel free to email me at connorbman@gmail.com
 
